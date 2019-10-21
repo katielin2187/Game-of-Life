@@ -1,0 +1,180 @@
+\section{production.\+h File Reference}
+\label{production_8h}\index{production.\+h@{production.\+h}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \textbf{ production} (int argc, char $\ast$argv[$\,$])
+\item 
+void \textbf{ Play\+One} (unsigned int nr, unsigned int nc, char $\ast$Old, char $\ast$New)
+\item 
+void \textbf{ print\+Board} (int nc, int nr, char $\ast$p)
+\item 
+int \textbf{ do\+Generations} (unsigned int nr, unsigned int nc, int given\+\_\+gens, char $\ast$A, char $\ast$B, char $\ast$C, char print, char pause)
+\item 
+bool \textbf{ check\+Array\+Equals} (int nc, int nr, char $\ast$A, char $\ast$B)
+\item 
+int \textbf{ Count\+Neighbors} (unsigned int r, unsigned int c, int n\+Rows, int n\+Cols, char $\ast$Old)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\label{production_8h_a23e42c62bb30abbf3f9280d24059cdbf}} 
+\index{production.\+h@{production.\+h}!check\+Array\+Equals@{check\+Array\+Equals}}
+\index{check\+Array\+Equals@{check\+Array\+Equals}!production.\+h@{production.\+h}}
+\subsubsection{check\+Array\+Equals()}
+{\footnotesize\ttfamily bool check\+Array\+Equals (\begin{DoxyParamCaption}\item[{int}]{nc,  }\item[{int}]{nr,  }\item[{char $\ast$}]{A,  }\item[{char $\ast$}]{B }\end{DoxyParamCaption})}
+
+Checks to see if the arrays are equal.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nr} & The rows of the playing field. \\
+\hline
+{\em nc} & The columns of the playing field. \\
+\hline
+{\em A} & The character pointer to the first array, A, being compared. \\
+\hline
+{\em B} & The character pointer to the second array, B, being compared. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+are\+Equal true if all the characters in the array are the same, false if any of the characters in the array are different. 
+\end{DoxyReturn}
+
+
+Referenced by do\+Generations(), and test\+Check\+Array\+Equals().
+
+\mbox{\label{production_8h_a978960cada6630fbe325d7e91608d2fc}} 
+\index{production.\+h@{production.\+h}!Count\+Neighbors@{Count\+Neighbors}}
+\index{Count\+Neighbors@{Count\+Neighbors}!production.\+h@{production.\+h}}
+\subsubsection{Count\+Neighbors()}
+{\footnotesize\ttfamily int Count\+Neighbors (\begin{DoxyParamCaption}\item[{unsigned int}]{r,  }\item[{unsigned int}]{c,  }\item[{int}]{n\+Rows,  }\item[{int}]{n\+Cols,  }\item[{char $\ast$}]{Old }\end{DoxyParamCaption})}
+
+Function that counts the neighbors, on all eight sides, of the cell being examined.
+
+
+\begin{DoxyParams}{Parameters}
+{\em r} & Row coordinate of cell. \\
+\hline
+{\em c} & Column coordinate of cell. \\
+\hline
+{\em n\+Rows} & The rows of the playing field. \\
+\hline
+{\em n\+Cols} & The columns of the Playing field. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+occupied The number of occupied neighbors. 
+\end{DoxyReturn}
+
+
+Referenced by Play\+One(), and test\+Count\+Neighbors().
+
+\mbox{\label{production_8h_a57c8104ef1d337d235e96e12e5397898}} 
+\index{production.\+h@{production.\+h}!do\+Generations@{do\+Generations}}
+\index{do\+Generations@{do\+Generations}!production.\+h@{production.\+h}}
+\subsubsection{do\+Generations()}
+{\footnotesize\ttfamily int do\+Generations (\begin{DoxyParamCaption}\item[{unsigned int}]{nr,  }\item[{unsigned int}]{nc,  }\item[{int}]{given\+\_\+gens,  }\item[{char $\ast$}]{A,  }\item[{char $\ast$}]{B,  }\item[{char $\ast$}]{C,  }\item[{char}]{print,  }\item[{char}]{pause }\end{DoxyParamCaption})}
+
+Calls Play\+One for the input amount of generations given, unless 1) All organisms die. 2) The pattern of organisms from the previous generation repeats itself. 3) The predefined number of given generations is reached.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nr} & Row coordinate of cell \\
+\hline
+{\em nc} & Column coordinate of cell \\
+\hline
+{\em A} & The character pointer to the (Old) array, A. \\
+\hline
+{\em B} & The character pointer to the (New) array, B. \\
+\hline
+{\em C} & The character pointer to the (Other, grandfather) array, C. \\
+\hline
+{\em print} & An optional argument with the value of \textquotesingle{}y\textquotesingle{} or \textquotesingle{}n\textquotesingle{} indicating whether a each generation (including generation 0), should be displayed or printed before proceeding to the next generation. \\
+\hline
+{\em pause} & An optional argument with the value of \textquotesingle{}y\textquotesingle{} or \textquotesingle{}n\textquotesingle{} indicating whether a keystroke is needed between generations. Defaults to \textquotesingle{}n\textquotesingle{}. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+occupied The number of occupied neighbors. 
+\end{DoxyReturn}
+
+
+References check\+Array\+Equals(), Play\+One(), and print\+Board().
+
+
+
+Referenced by production(), and test\+Do\+Generations().
+
+\mbox{\label{production_8h_af5b14d1dae61b5bee7bc0c3aa0dea79e}} 
+\index{production.\+h@{production.\+h}!Play\+One@{Play\+One}}
+\index{Play\+One@{Play\+One}!production.\+h@{production.\+h}}
+\subsubsection{Play\+One()}
+{\footnotesize\ttfamily void Play\+One (\begin{DoxyParamCaption}\item[{unsigned int}]{nr,  }\item[{unsigned int}]{nc,  }\item[{char $\ast$}]{Old,  }\item[{char $\ast$}]{New }\end{DoxyParamCaption})}
+
+Plays the game of life\+: If an occupied cell, \textquotesingle{}x\textquotesingle{}, has less than 2, or greater than 3 neighbors, the organism and becomes an, \textquotesingle{}o\textquotesingle{}. If an occupied cell, \textquotesingle{}x\textquotesingle{} has 2 or 3 neighbors, the organism survives to the next generation. If an unoccupied cell, \textquotesingle{}o\textquotesingle{}, has precisely 3 occupied neighbors, it becomes occupied by a new organism, \textquotesingle{}x\textquotesingle{}.
+
+
+\begin{DoxyParams}{Parameters}
+{\em nr} & The rows of the playing field. \\
+\hline
+{\em nc} & The columns of the playing field. \\
+\hline
+{\em Old} & The character pointer to the Old array. \\
+\hline
+{\em New} & The character pointer to the new array. \\
+\hline
+\end{DoxyParams}
+
+
+References Count\+Neighbors().
+
+
+
+Referenced by do\+Generations(), and test\+Play\+One().
+
+\mbox{\label{production_8h_aa8ce8f6ec6ade4eb1bfe04f6545f7582}} 
+\index{production.\+h@{production.\+h}!print\+Board@{print\+Board}}
+\index{print\+Board@{print\+Board}!production.\+h@{production.\+h}}
+\subsubsection{print\+Board()}
+{\footnotesize\ttfamily void print\+Board (\begin{DoxyParamCaption}\item[{int}]{n\+Rows,  }\item[{int}]{n\+Cols,  }\item[{char $\ast$}]{L }\end{DoxyParamCaption})}
+
+Prints out the board.
+
+
+\begin{DoxyParams}{Parameters}
+{\em n\+Rows} & The rows of the playing field. \\
+\hline
+{\em n\+Cols} & The columns of the Playing field. \\
+\hline
+\end{DoxyParams}
+
+
+Referenced by do\+Generations(), and test\+Play\+One().
+
+\mbox{\label{production_8h_a9f67b51c42a54745557e7a2c9c07c46f}} 
+\index{production.\+h@{production.\+h}!production@{production}}
+\index{production@{production}!production.\+h@{production.\+h}}
+\subsubsection{production()}
+{\footnotesize\ttfamily bool production (\begin{DoxyParamCaption}\item[{int}]{argc,  }\item[{char $\ast$}]{argv[$\,$] }\end{DoxyParamCaption})}
+
+Your production code goes in this function.
+
+
+\begin{DoxyParams}{Parameters}
+{\em argc} & Number of words on the command line \\
+\hline
+{\em argv} & Array of pointers to character strings representing the words on the command line. \\
+\hline
+\end{DoxyParams}
+\begin{DoxyReturn}{Returns}
+true if Program was able to play the game of life false if User entered bad input. 
+\end{DoxyReturn}
+
+
+References do\+Generations().
+
+
+
+Referenced by main().
+

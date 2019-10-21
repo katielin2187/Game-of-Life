@@ -1,0 +1,139 @@
+\section{tests.\+h File Reference}
+\label{tests_8h}\index{tests.\+h@{tests.\+h}}
+\subsection*{Functions}
+\begin{DoxyCompactItemize}
+\item 
+bool \textbf{ tests} (void)
+\item 
+bool \textbf{ test\+Read\+Input} (void)
+\item 
+bool \textbf{ test\+Make\+Arrays} (void)
+\item 
+bool \textbf{ test\+Play\+One} (void)
+\item 
+bool \textbf{ test\+Count\+Neighbors} (void)
+\item 
+bool \textbf{ test\+Check\+Array\+Equals} (void)
+\item 
+bool \textbf{ test\+Do\+Generations} (void)
+\end{DoxyCompactItemize}
+
+
+\subsection{Function Documentation}
+\mbox{\label{tests_8h_adc68b5779bf3ba3a99ee3a9eb8d86935}} 
+\index{tests.\+h@{tests.\+h}!test\+Check\+Array\+Equals@{test\+Check\+Array\+Equals}}
+\index{test\+Check\+Array\+Equals@{test\+Check\+Array\+Equals}!tests.\+h@{tests.\+h}}
+\subsubsection{test\+Check\+Array\+Equals()}
+{\footnotesize\ttfamily bool test\+Check\+Array\+Equals (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function calls check\+Array\+Equals and checks to see if the given arrays are the same.
+
+\begin{DoxyReturn}{Returns}
+true if the given arrays are equal. false if the any of the elements in the arrays are different. 
+\end{DoxyReturn}
+
+
+References check\+Array\+Equals().
+
+
+
+Referenced by tests().
+
+\mbox{\label{tests_8h_a75eb3d149c9fa363b42cccfb3d53a65a}} 
+\index{tests.\+h@{tests.\+h}!test\+Count\+Neighbors@{test\+Count\+Neighbors}}
+\index{test\+Count\+Neighbors@{test\+Count\+Neighbors}!tests.\+h@{tests.\+h}}
+\subsubsection{test\+Count\+Neighbors()}
+{\footnotesize\ttfamily bool test\+Count\+Neighbors (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function calls Count\+Neighbors and checks to see if it counting the right amount of neighbors.
+
+\begin{DoxyReturn}{Returns}
+true if the correct neighbors are counted for a certain cell. false if the neighbors counted are incorrect. 
+\end{DoxyReturn}
+
+
+References Count\+Neighbors().
+
+
+
+Referenced by tests().
+
+\mbox{\label{tests_8h_a9064028f30ed56e9fc83c749eb75362f}} 
+\index{tests.\+h@{tests.\+h}!test\+Do\+Generations@{test\+Do\+Generations}}
+\index{test\+Do\+Generations@{test\+Do\+Generations}!tests.\+h@{tests.\+h}}
+\subsubsection{test\+Do\+Generations()}
+{\footnotesize\ttfamily bool test\+Do\+Generations (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function calls do\+Generations and checks to see if do\+Generations quits when it is supposed to.
+
+\begin{DoxyReturn}{Returns}
+true if do\+Generations returns the correct count of generations. false if do\+Generations returns the incorrect count of generations. 
+\end{DoxyReturn}
+
+
+References do\+Generations().
+
+
+
+Referenced by tests().
+
+\mbox{\label{tests_8h_af6e338851f3ccb4714e1bfb06ec4b428}} 
+\index{tests.\+h@{tests.\+h}!test\+Make\+Arrays@{test\+Make\+Arrays}}
+\index{test\+Make\+Arrays@{test\+Make\+Arrays}!tests.\+h@{tests.\+h}}
+\subsubsection{test\+Make\+Arrays()}
+{\footnotesize\ttfamily bool test\+Make\+Arrays (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function checks to see if the arrays are able to be made properly. \begin{DoxyReturn}{Returns}
+true if Program was able to create arrays. false if the arrays are not able to be made. 
+\end{DoxyReturn}
+
+
+Referenced by tests().
+
+\mbox{\label{tests_8h_aa4c8095a20d90a18d843ab63ecd02d00}} 
+\index{tests.\+h@{tests.\+h}!test\+Play\+One@{test\+Play\+One}}
+\index{test\+Play\+One@{test\+Play\+One}!tests.\+h@{tests.\+h}}
+\subsubsection{test\+Play\+One()}
+{\footnotesize\ttfamily bool test\+Play\+One (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function calls Play\+One and checks to see if it is working properly. \begin{DoxyReturn}{Returns}
+true if Play\+One does what it is supposed to do. false if Play\+One does not work properly. 
+\end{DoxyReturn}
+
+
+References Play\+One(), and print\+Board().
+
+
+
+Referenced by tests().
+
+\mbox{\label{tests_8h_aa89f64db87aebe77bd891e2894595e4e}} 
+\index{tests.\+h@{tests.\+h}!test\+Read\+Input@{test\+Read\+Input}}
+\index{test\+Read\+Input@{test\+Read\+Input}!tests.\+h@{tests.\+h}}
+\subsubsection{test\+Read\+Input()}
+{\footnotesize\ttfamily bool test\+Read\+Input (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function checks to see if the file input is being read properly. \begin{DoxyReturn}{Returns}
+true if the file input was read properly. false if file input was not able to be read. 
+\end{DoxyReturn}
+
+
+Referenced by tests().
+
+\mbox{\label{tests_8h_a5e6e6e78df62797046c9ea173550a68a}} 
+\index{tests.\+h@{tests.\+h}!tests@{tests}}
+\index{tests@{tests}!tests.\+h@{tests.\+h}}
+\subsubsection{tests()}
+{\footnotesize\ttfamily bool tests (\begin{DoxyParamCaption}\item[{void}]{ }\end{DoxyParamCaption})}
+
+This function calls all the test functions and checks to see if everything is working properly. \begin{DoxyReturn}{Returns}
+true if Program was able to play the game of life false if something went wrong in the tests. 
+\end{DoxyReturn}
+
+
+References test\+Check\+Array\+Equals(), test\+Count\+Neighbors(), test\+Do\+Generations(), test\+Make\+Arrays(), test\+Play\+One(), and test\+Read\+Input().
+
+
+
+Referenced by main().
+
